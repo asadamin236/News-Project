@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: silver;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  height: 60px;  /* Reduced height of the nav bar */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.logo li {
+  list-style: none;
+  margin-inline: 22px;
+  font-size: 19px;
+}
+.logo li:hover {
+  color: rgb(95, 126, 174);
+  cursor: pointer;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;  /* Align input and button vertically */
+}
+
+.searchBar input {
+  width: 220px;
+  padding: 5px;  /* Reduced padding for a smaller height */
+  font-size: 16px;  /* Slightly smaller font size */
+  border: none;
+  margin-inline: 5px;
+  height: 30px;  /* Reduced height of the input field */
+}
+
+.searchBar button {
+  padding: 5px;  /* Reduced padding for button */
+  font-size: 16px;  /* Slightly smaller font size */
+  border: none;
+  background-color: rgb(93, 3, 166);
+  color: white;
+  cursor: pointer;
+  height: 40px;  /* Reduced height of the button */
+  margin-inline: 5px;
+}
+
+.cardData {
+  display: grid;
+  justify-content: center;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: auto;
+  margin-top: 70px;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  padding: 11px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  margin-top: 10px;
+  padding: 3px;
+}
+
+.card p {
+  margin-top: 10px;
+  padding: 2px;
+}
+
+.category {
+  position: absolute;
+  margin-top: 120px;
+  color: black;
+  margin-left: 166px;
+}
+
+@media only screen and (max-wwidth: 750px) {
+  li {
+    display: none;
+  }  
+}
+
+@media only screen and (max-wwidth: 470px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }  
+  .logo {
+    justify-content: center;
+  }
+  .searchBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .category {
+    margin-top: 120px;
+    text-align: center;
+  }
+}
